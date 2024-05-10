@@ -4,10 +4,9 @@ import "../style/PdfHighlighter.css";
 
 import {
   EventBus,
-  NullL10n,
   PDFLinkService,
   PDFViewer,
-} from "pdfjs-dist/legacy/web/pdf_viewer";
+} from "pdfjs-dist/legacy/web/pdf_viewer.mjs";
 import type {
   IHighlight,
   LTWH,
@@ -182,7 +181,6 @@ export class PdfHighlighter<T_HT extends IHighlight> extends PureComponent<
         textLayerMode: 2,
         removePageBorders: true,
         linkService: this.linkService,
-        l10n: NullL10n,
       });
 
     this.linkService.setDocument(pdfDocument);
